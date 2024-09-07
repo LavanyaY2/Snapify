@@ -41,8 +41,26 @@ const Feed = () => {
 
   return (
 
-    <section className="feed">
-      <form className="relative w-full flex-center">
+    <div className="pt-10">
+
+      <div className="grid grid-cols-3 gap-4">
+        <div className="rounded-lg overflow-hidden shadow-lg border slide-in-1">
+          <img className="w-full h-full object-cover " src="/assets/images/image_1.jpg" />
+        </div>
+        <div className="rounded-lg overflow-hidden shadow-lg border slide-in-2">
+          <img className="w-full h-full object-cover" src="/assets/images/image_2.jpg" />
+        </div>
+        <div className="rounded-lg overflow-hidden shadow-lg border slide-in-3">
+          <img className="w-full h-full object-cover" src="/assets/images/image_3.jpg" />
+        </div>
+      </div>
+
+      <p className="typing-animation text-3xl font-bold mt-10 font-satoshi blue_gradient w-full">Catch up on what's new...</p>
+
+      <section className="feed">
+
+      
+      {/* <form className="relative w-full flex-center">
 
         <input 
           type="test" 
@@ -53,14 +71,17 @@ const Feed = () => {
           className="search_input peer"
         />
 
-      </form>
+      </form> */}
 
       <PromptCardList 
         data = {posts}
         handleTagClick= {() => {}}
       />
 
-    </section>
+      </section>
+    </div>
+
+
 
   )
 }

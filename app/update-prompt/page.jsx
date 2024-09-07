@@ -2,8 +2,8 @@ import React from 'react'
 
 const UpdatePrompt = () => {
   return (
-    <div>page</div>
+    <div>UpdatePrompt</div>
   )
 }
 
-export default page
+export default UpdatePrompt

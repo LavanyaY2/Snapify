@@ -16,18 +16,18 @@ const Form = (
       </h1>
 
       <p className='desc text-left max-w-md'>
-        {type} and share prompts with everyone and be creative with AI-powered platforms!
+      Snap, share, and spark connections in every frame - Share your story with the world!
       </p>
 
       <form onSubmit={handleSubmit}
       className='mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism'>
         <label>
-          <span className='font-satoshi font-semibold text-base text-gray-700'>Your AI prompt</span>
+          <span className='font-satoshi font-semibold text-base text-gray-700'>What's on your mind today?</span>
           
           <textarea 
             value={post.prompt}
             onChange={ (e) => setPost( { ...post, prompt: e.target.value } ) }
-            placeholder='Write your prompt here...'
+            placeholder='Type here...'
             required
             className='form_textarea' 
           />

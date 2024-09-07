@@ -20,13 +20,13 @@ const CreatePrompt = () => {
         tag: '',
     });
 
+
     // function to create prompt
     const CreatePrompt = async (e) => {
         e.preventDefault(); // prevents default behavior of the browser (i.e. preventing a reload)
         setSubmitting(true); // submitting the form
 
         // the '?' is the 'optional chaining operator' in javascript - usually used to prevent runtime errors
-
         // creating the prompt
         try {            
 
@@ -45,7 +45,6 @@ const CreatePrompt = () => {
                 router.push("/");
             }
 
-
         } catch (error){
             console.log(error);
         } finally {
@@ -53,14 +52,19 @@ const CreatePrompt = () => {
         }
     }
 
+
   return (
-    <Form 
-        type = 'Create'
-        post = {post}
-        setPost = {setPost}
-        submitting = {submitting}
-        handleSubmit = {CreatePrompt}
-    />
+    <div>
+        <Form 
+            type = 'Create'
+            post = {post}
+            setPost = {setPost}
+            submitting = {submitting}
+            handleSubmit = {CreatePrompt}
+        />
+
+    </div>
+    
   )
 }
 

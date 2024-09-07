@@ -5,19 +5,20 @@ const Home = () => {
     <section className="w-full flex-center flex-col">
 
         <h1 className="head_text text-center">
-            Discover and Share
+            Moments that Move
             <br className="max-md:hidden"/>
-            <scan className="orange_gradient text-center"> AI-Powered Prompts </scan>
+            <scan className="purple_gradient text-center"> Stories that Shine </scan>
         </h1>
 
         <p className="desc text-center">
-            Promptly is an AI-prompting tool to discover, create and share AI prompts.
+          A canvas for your life's best moments - express, explore and connect
         </p>
 
         {/* Feed section of the homepage */}
         <Feed/>
 
     </section>
+    
   )
 }
 

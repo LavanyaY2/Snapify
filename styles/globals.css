@@ -101,6 +101,10 @@
   @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
 }
 
+.purple_gradient {
+  @apply bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent;
+}
+
 .desc {
   @apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl;
 }
@@ -123,7 +127,7 @@
 
 /* Feed Component */
 .feed {
-  @apply mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
+  @apply mt-0 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
 }
 
 /* Form Component */
@@ -167,4 +171,52 @@
 
 .flex-between {
   @apply flex justify-between items-center;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(50);
+    opacity: 1;
+  }
+}
+
+.slide-in-1{
+  animation: slideIn 1s ease-out;
+}
+.slide-in-2{
+  animation: slideIn 2s ease-out;
+}
+.slide-in-3{
+  animation: slideIn 3s ease-out;
+}
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.typing-animation {
+  font-family: monospace; /* Optional, for a typewriter-like effect */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .15em solid black; /* Cursor style */
+  animation: typing 3s steps(15, end), blink .75s step-end infinite;
 }
