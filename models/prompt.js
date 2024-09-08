@@ -14,8 +14,13 @@ const PromptSchema = new Schema ({
     },
     tag: {
         type: String,
-        required: [true, "Tag is required."],
-    }
+    },
+
+    // adding new feature to the schema
+    myFile: {
+        type: String,
+        required: [true, "Image is required."],
+    },
 });
 
 // since the route is only be running when it's called - so we need to check if model exists

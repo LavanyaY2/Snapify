@@ -3,7 +3,7 @@ import Prompt from "@models/prompt";
 
 export const POST = async (req) => {
     // grab the things we have passed through the POST request
-    const { userId, prompt, tag } = await req.json();
+    const { userId, prompt, tag, myFile } = await req.json();
 
     // connect to the database
     try {
@@ -15,7 +15,8 @@ export const POST = async (req) => {
         const newPrompt = new Prompt({
             creator: userId,
             prompt,
-            tag
+            tag,
+            myFile
         })
 
         await newPrompt.save(); // to save the prompt to the database

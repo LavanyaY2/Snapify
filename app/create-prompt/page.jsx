@@ -18,6 +18,9 @@ const CreatePrompt = () => {
     const [post, setPost] = useState({
         prompt: '',
         tag: '',
+
+        // add the image
+        myFile: '',
     });
 
 
@@ -36,7 +39,8 @@ const CreatePrompt = () => {
                 body: JSON.stringify({
                     prompt: post.prompt,
                     userId: session?.user.id,
-                    tag: post.tag
+                    tag: post.tag,
+                    myFile: post.myFile,
                 })
             }); 
 

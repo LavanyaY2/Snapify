@@ -27,7 +27,7 @@ export const GET = async (req, { params }) => {
 // PATCH - to update
 export const PATCH = async (req, {params}) => {
     // get data to update
-    const {prompt, tag} = await req.json();
+    const {prompt, tag, myFile} = await req.json();
 
     try {
         await connectToDB();
@@ -41,6 +41,7 @@ export const PATCH = async (req, {params}) => {
         existingPrompt.prompt = prompt;
         // update the tag
         existingPrompt.tag = tag;
+        existingPrompt.myFile = myFile;
 
         await existingPrompt.save();
         return new Response(JSON.stringify(existingPrompt), {status: 200}); // return the updated prompt
