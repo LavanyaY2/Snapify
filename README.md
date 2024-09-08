@@ -5,8 +5,11 @@ The application is built using Next.js, MongoDB and Tailwind CSS. Next.js handle
 Catch a peek into what it looks like!
 
 ![Screenshot 2024-09-08 153129](https://github.com/user-attachments/assets/b6384f28-de9b-4c0f-b744-0748020cc65e)
-![Screenshot 2024-09-08 153146](https://github.com/user-attachments/assets/41078bd0-3e3f-487d-9e3f-29f71616a836)
-![Screenshot 2024-09-08 153214](https://github.com/user-attachments/assets/c43ce100-6990-4e93-ad6b-73767de2f6d7)
+
+![Screenshot 2024-09-08 180435](https://github.com/user-attachments/assets/393e612c-e4e1-427c-855d-45a89f842f83)
+
+![Screenshot 2024-09-08 180208](https://github.com/user-attachments/assets/5b36d7c8-d7c2-4169-8618-c9c3da184ba1)
+
 ![Screenshot 2024-09-08 153254](https://github.com/user-attachments/assets/acc9a884-efe0-4d9c-b1be-f5a58167f192)
 
 
