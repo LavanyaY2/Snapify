@@ -1,5 +1,9 @@
 import Feed from "@components/Feed"
 
+// testing graphql stuff
+import { ApolloProvider } from "@apollo/client";
+import client from "./apollo-client";
+
 const Home = () => {
   return (
     <section className="w-full flex-center flex-col">
@@ -14,6 +18,8 @@ const Home = () => {
           A canvas for your life's best moments - express, explore and connect
         </p>
 
+        {/* testing grahpql stuff */}
+
         {/* Feed section of the homepage */}
         <Feed/>
 
@@ -22,4 +28,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;

@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 
 import {useState, useEffect} from 'react';
 import { useSession } from 'next-auth/react';
@@ -40,20 +41,38 @@ const MyProfile = () => {
         }
     }
 
-    // fetch posts data from the api endpoint
-    useEffect( () => {
-        const fetchPosts = async () => {
-          const response = await fetch(`api/users/${session?.user.id}/posts`);
-          const data = await response.json();
+    // // fetch posts data from the api endpoint
+    // useEffect( () => {
+    //     const fetchPosts = async () => {
+    //       const response = await fetch(`api/users/${session?.user.id}/posts`);
+    //       const data = await response.json();
     
-          setPosts(data);
-        }
+    //       setPosts(data);
+    //     }
 
-        if (session?.user.id) {
+    //     if (session?.user.id) {
+    //         fetchPosts();
+    //     }
+
+    //   }, []);
+
+
+      useEffect(() => {
+        const fetchPosts = async () => {
+            try {
+                const response = await fetch(`/api/users/${session.user.id}/posts`);
+                const data = await response.json();
+                setPosts(data);
+            } catch (err) {
+                console.error("Failed to fetch posts:", err);
+            }
+        };
+    
+        if (session?.user?.id) {
             fetchPosts();
         }
-
-      }, []);
+    }, [session]);
+    
 
     return (
     <Profile 

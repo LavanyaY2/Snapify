@@ -6,11 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prod": "npm run build && npm run start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.11.8",
+    "@apollo/server": "^4.11.0",
+    "@as-integrations/next": "^3.1.0",
     "@google/generative-ai": "^0.17.1",
+    "apollo-datasource-mongodb": "^0.6.0",
+    "apollo-server-micro": "^3.13.0",
+    "graphql": "^16.9.0",
+    "graphql-tag": "^2.12.6",
+    "mongodb": "^6.16.0",
+    "mongoose": "^8.14.2",
     "next": "14.2.6",
+    "next-auth": "^4.24.11",
     "react": "^18",
     "react-dom": "^18"
   },

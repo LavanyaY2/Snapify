@@ -1,6 +1,21 @@
 import PromptCard from "./PromptCard";
 
-const Profile = ({name, desc, data, handleEdit, handleDelete}) => {
+import { gql, useQuery } from '@apollo/client';
+
+const USER_QUERY = gql`
+  query users {
+    users {
+      id
+      email
+      username
+      image
+    }
+  }
+`;
+
+const Profile = ({name, desc, posts, handleEdit, handleDelete}) => {
+
+  const {data, loading, error} = useQuery(USER_QUERY);
 
   return (
     <section className="w-full">
@@ -8,10 +23,12 @@ const Profile = ({name, desc, data, handleEdit, handleDelete}) => {
         <span className="blue_gradient">{name} Profile</span>
       </h1>
 
+      <p>Testing, {data?.users?.name}</p>
+
       <p className="desc text-left">{desc}</p>
 
       <div className="mt-10 prompt_layout">
-        {data.map((post) => (
+        {posts.map((post) => (
           <PromptCard
           key={post.id}
           post={post}
